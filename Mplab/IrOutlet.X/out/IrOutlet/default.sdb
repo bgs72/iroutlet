@@ -1,0 +1,342 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15325 ]
+[d frameptr 6 ]
+"46 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c
+[e E6465 . `uc
+RC5_STATE_IDLE 0
+RC5_STATE_RECV 1
+]
+"130
+[e E6460 . `uc
+RC5_TIME_TOOSHORT 28
+RC5_TIME_BOUNDARY 83
+RC5_TIME_TOOLONG 139
+]
+"24 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c
+[v _isr isr `II(v  1 e 1 0 ]
+"72 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"88
+[v __initialize _initialize `(v  1 e 1 0 ]
+"124
+[v __execute _execute `(v  1 e 1 0 ]
+"60 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c
+[v _rc5Setup rc5Setup `(v  1 e 1 0 ]
+"96
+[v _rc5IsrPin rc5IsrPin `(v  1 e 1 0 ]
+"196
+[v _rc5IsrTimer rc5IsrTimer `(v  1 e 1 0 ]
+"10 /opt/microchip/xc8/v3.10/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v3.10/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+[s S77 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"427 /home/bart/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f15325.h
+[u S82 . 1 `S77 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES82  1 e 1 @11 ]
+"447
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+[s S149 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"462
+[u S156 . 1 `S149 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES156  1 e 1 @12 ]
+"497
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
+[s S132 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+]
+"512
+[u S139 . 1 `S132 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES139  1 e 1 @14 ]
+"547
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+[s S480 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"562
+[u S487 . 1 `S480 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES487  1 e 1 @18 ]
+"592
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"642
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+[s S412 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"657
+[u S419 . 1 `S412 1 . 1 0 ]
+[v _LATAbits LATAbits `VES419  1 e 1 @24 ]
+"687
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"3763
+[v _TMR2 TMR2 `VEuc  1 e 1 @652 ]
+"3812
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+[s S210 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"3902
+[s S214 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+]
+[s S222 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S226 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S235 . 1 `S210 1 . 1 0 `S214 1 . 1 0 `S222 1 . 1 0 `S226 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES235  1 e 1 @654 ]
+[s S300 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"4045
+[s S305 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S311 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S316 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S322 . 1 `S300 1 . 1 0 `S305 1 . 1 0 `S311 1 . 1 0 `S316 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES322  1 e 1 @655 ]
+[s S266 . 1 `uc 1 CS 1 0 :4:0 
+]
+"4165
+[s S268 . 1 `uc 1 CS0 1 0 :1:0 
+`uc 1 CS1 1 0 :1:1 
+`uc 1 CS2 1 0 :1:2 
+`uc 1 CS3 1 0 :1:3 
+]
+[s S273 . 1 `uc 1 T2CS 1 0 :4:0 
+]
+[s S275 . 1 `uc 1 T2CS0 1 0 :1:0 
+`uc 1 T2CS1 1 0 :1:1 
+`uc 1 T2CS2 1 0 :1:2 
+`uc 1 T2CS3 1 0 :1:3 
+]
+[u S280 . 1 `S266 1 . 1 0 `S268 1 . 1 0 `S273 1 . 1 0 `S275 1 . 1 0 ]
+[v _T2CLKCONbits T2CLKCONbits `VES280  1 e 1 @656 ]
+[s S350 . 1 `uc 1 RSEL 1 0 :4:0 
+]
+"4245
+[s S352 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+]
+[s S357 . 1 `uc 1 T2RSEL 1 0 :4:0 
+]
+[s S359 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+]
+[u S364 . 1 `S350 1 . 1 0 `S352 1 . 1 0 `S357 1 . 1 0 `S359 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES364  1 e 1 @657 ]
+[s S43 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+]
+"7954
+[u S46 . 1 `S43 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES46  1 e 1 @1808 ]
+[s S541 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"8095
+[u S546 . 1 `S541 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES546  1 e 1 @1814 ]
+[s S385 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+]
+"8243
+[u S388 . 1 `S385 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES388  1 e 1 @1818 ]
+[s S90 . 1 `uc 1 CWG1MD 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 MSSP1MD 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 UART1MD 1 0 :1:6 
+`uc 1 UART2MD 1 0 :1:7 
+]
+"8574
+[u S97 . 1 `S90 1 . 1 0 ]
+[v _PMD4bits PMD4bits `VES97  1 e 1 @1946 ]
+"17536
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+[s S429 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+]
+"17551
+[u S436 . 1 `S429 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES436  1 e 1 @7992 ]
+[s S446 . 1 `uc 1 WPUA0 1 0 :1:0 
+`uc 1 WPUA1 1 0 :1:1 
+`uc 1 WPUA2 1 0 :1:2 
+`uc 1 WPUA3 1 0 :1:3 
+`uc 1 WPUA4 1 0 :1:4 
+`uc 1 WPUA5 1 0 :1:5 
+]
+"17596
+[u S453 . 1 `S446 1 . 1 0 ]
+[v _WPUAbits WPUAbits `VES453  1 e 1 @7993 ]
+"17631
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"17676
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+[s S463 . 1 `uc 1 INLVLA0 1 0 :1:0 
+`uc 1 INLVLA1 1 0 :1:1 
+`uc 1 INLVLA2 1 0 :1:2 
+`uc 1 INLVLA3 1 0 :1:3 
+`uc 1 INLVLA4 1 0 :1:4 
+`uc 1 INLVLA5 1 0 :1:5 
+]
+"17736
+[u S470 . 1 `S463 1 . 1 0 ]
+[v _INLVLAbits INLVLAbits `VES470  1 e 1 @7996 ]
+[s S507 . 1 `uc 1 IOCAP0 1 0 :1:0 
+`uc 1 IOCAP1 1 0 :1:1 
+`uc 1 IOCAP2 1 0 :1:2 
+`uc 1 IOCAP3 1 0 :1:3 
+`uc 1 IOCAP4 1 0 :1:4 
+`uc 1 IOCAP5 1 0 :1:5 
+]
+"17786
+[u S514 . 1 `S507 1 . 1 0 ]
+[v _IOCAPbits IOCAPbits `VES514  1 e 1 @7997 ]
+[s S524 . 1 `uc 1 IOCAN0 1 0 :1:0 
+`uc 1 IOCAN1 1 0 :1:1 
+`uc 1 IOCAN2 1 0 :1:2 
+`uc 1 IOCAN3 1 0 :1:3 
+`uc 1 IOCAN4 1 0 :1:4 
+`uc 1 IOCAN5 1 0 :1:5 
+]
+"17836
+[u S531 . 1 `S524 1 . 1 0 ]
+[v _IOCANbits IOCANbits `VES531  1 e 1 @7998 ]
+[s S22 . 1 `uc 1 IOCAF0 1 0 :1:0 
+`uc 1 IOCAF1 1 0 :1:1 
+`uc 1 IOCAF2 1 0 :1:2 
+`uc 1 IOCAF3 1 0 :1:3 
+`uc 1 IOCAF4 1 0 :1:4 
+`uc 1 IOCAF5 1 0 :1:5 
+]
+"17886
+[u S29 . 1 `S22 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES29  1 e 1 @7999 ]
+"17921
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"18021
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"18071
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"46 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c
+[v __state _state `E6465  1 s 1 _state ]
+"47
+[v __bitValues _bitValues `us  1 s 2 _bitValues ]
+"48
+[v __bitCount _bitCount `uc  1 s 1 _bitCount ]
+"49
+[v __shortPulseCount _shortPulseCount `uc  1 s 1 _shortPulseCount ]
+"50
+[v __previousBitValue _previousBitValue `uc  1 s 1 _previousBitValue ]
+"51
+[v __rc5CommandAvailable _rc5CommandAvailable `VEa  1 e 1 0 ]
+[s S123 . 3 `uc 1 toggle 1 0 `uc 1 address 1 1 `uc 1 command 1 2 ]
+"52
+[v __rc5Command _rc5Command `VES123  1 e 3 0 ]
+"72 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"79
+} 0
+"88
+[v __initialize _initialize `(v  1 e 1 0 ]
+{
+"115
+} 0
+"60 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c
+[v _rc5Setup rc5Setup `(v  1 e 1 0 ]
+{
+"92
+} 0
+"124 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c
+[v __execute _execute `(v  1 e 1 0 ]
+{
+[s S123 . 3 `uc 1 toggle 1 0 `uc 1 address 1 1 `uc 1 command 1 2 ]
+"126
+[v __execute@rc5Command rc5Command `S123  1 a 3 0 ]
+"281
+} 0
+"24 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"39
+} 0
+"196 /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c
+[v _rc5IsrTimer rc5IsrTimer `(v  1 e 1 0 ]
+{
+"208
+} 0
+"96
+[v _rc5IsrPin rc5IsrPin `(v  1 e 1 0 ]
+{
+"106
+[v rc5IsrPin@time time `uc  1 a 1 4 ]
+"192
+} 0

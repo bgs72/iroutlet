@@ -1,0 +1,449 @@
+Info: Processing symbol 'K8:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'R15:IrOutlet:RES_H'.
+Info: Processing symbol 'R6:IrOutlet:RES_H'.
+Info: Processing symbol 'K6:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'J6:IrOutlet:OUTLET'.
+Info: Processing symbol 'R16:IrOutlet:RES_H'.
+Info: Processing symbol 'J5:IrOutlet:OUTLET'.
+Info: Processing symbol 'R5:IrOutlet:RES_H'.
+Info: Processing symbol 'R17:IrOutlet:RES_H'.
+Info: Processing symbol 'J4:IrOutlet:OUTLET'.
+Info: Processing symbol 'J7:IrOutlet:OUTLET'.
+Info: Processing symbol 'R4:IrOutlet:RES_H'.
+Info: Processing symbol 'U1:IrOutlet:DIP-14'.
+Info: Processing symbol 'J3:IrOutlet:OUTLET'.
+Info: Processing symbol 'J2:IrOutlet:TB_1x2'.
+Info: Processing symbol 'PS1:IrOutlet:IRM-05-5'.
+Info: Processing symbol 'C1:IrOutlet:C_L7.62mm_W3.2mm'.
+Info: Processing symbol 'R3:IrOutlet:RES_H'.
+Info: Processing symbol 'J1:IrOutlet:TB_1x3'.
+Info: Processing symbol 'D17:IrOutlet:DIODE_H'.
+Info: Processing symbol 'J10:IrOutlet:OUTLET'.
+Info: Processing symbol 'R10:IrOutlet:RES_H'.
+Info: Processing symbol 'K1:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'K2:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'J12:IrOutlet:HDR_1x5'.
+Info: Processing symbol 'R11:IrOutlet:RES_H'.
+Info: Processing symbol 'J11:IrOutlet:HDR_1x3'.
+Info: Processing symbol 'R9:IrOutlet:RES_H'.
+Info: Processing symbol 'K3:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'R12:IrOutlet:RES_H'.
+Info: Processing symbol 'K7:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'R8:IrOutlet:RES_H'.
+Info: Processing symbol 'R13:IrOutlet:RES_H'.
+Info: Processing symbol 'J9:IrOutlet:OUTLET'.
+Info: Processing symbol 'K4:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'J8:IrOutlet:OUTLET'.
+Info: Processing symbol 'R7:IrOutlet:RES_H'.
+Info: Processing symbol 'R14:IrOutlet:RES_H'.
+Info: Processing symbol 'K5:IrOutlet:RELAY_TE_RTD3405'.
+Info: Processing symbol 'Q8:IrOutlet:TO-92'.
+Info: Processing symbol 'D12:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'C2:IrOutlet:CAP_6.3mm_P2.50mm'.
+Info: Processing symbol 'R1:IrOutlet:RES_H'.
+Info: Processing symbol 'D11:IrOutlet:DIODE_H'.
+Info: Processing symbol 'Q4:IrOutlet:TO-92'.
+Info: Processing symbol 'D10:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'R2:IrOutlet:RES_H'.
+Info: Processing symbol 'D2:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'D9:IrOutlet:DIODE_H'.
+Info: Processing symbol 'D1:IrOutlet:DIODE_H'.
+Info: Processing symbol 'Q5:IrOutlet:TO-92'.
+Info: Processing symbol 'D3:IrOutlet:DIODE_H'.
+Info: Processing symbol 'D8:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'D4:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'D7:IrOutlet:DIODE_H'.
+Info: Processing symbol 'Q6:IrOutlet:TO-92'.
+Info: Processing symbol 'D6:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'Q7:IrOutlet:TO-92'.
+Info: Processing symbol 'D5:IrOutlet:DIODE_H'.
+Info: Processing symbol 'D16:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'Q1:IrOutlet:TO-92'.
+Info: Processing symbol 'D13:IrOutlet:DIODE_H'.
+Info: Processing symbol 'Q3:IrOutlet:TO-92'.
+Info: Processing symbol 'D14:IrOutlet:HDR_1x2'.
+Info: Processing symbol 'D15:IrOutlet:DIODE_H'.
+Info: Processing symbol 'Q2:IrOutlet:TO-92'.
+Reconnect R8 pin 2 from /RelaisDriver1.4/EN to /IrController/OUT4.
+Reconnect R10 pin 1 from Net-(Q5-Pad3) to Net-(Q5-B).
+Add net /IrController/OUT4.
+Add net /IrController/OUT5.
+Reconnect R2 pin 1 from Net-(Q1-Pad3) to Net-(Q1-B).
+Change R3 reference designator to R2.
+Reconnect R10 pin 2 from /RelaisDriver2.1/EN to /IrController/OUT5.
+Reconnect R8 pin 1 from Net-(Q4-Pad3) to Net-(Q4-B).
+Add net Net-(Q4-B).
+Update R8 footprint filters to 'R_*'.
+Update R8 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update R8 sheetname to '/RelaisDriver1.4/'.
+Update R8 fields.
+Change R8 reference designator to R7.
+Update R10 unit metadata.
+Update R9 footprint filters to 'R_*'.
+Update R10 fields.
+Change R10 reference designator to R9.
+Update R10 sheetname to '/RelaisDriver2.1/'.
+Update R9 unit metadata.
+Update R10 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R2 unit metadata.
+Reconnect R9 pin 1 from Net-(D9-Pad2) to Net-(D8-A).
+Add net Net-(D8-A).
+Add net Net-(Q1-B).
+Update R8 unit metadata.
+Reconnect R2 pin 2 from /RelaisDriver1.1/EN to /IrController/OUT1.
+Update R10 footprint filters to 'R_*'.
+Update R9 sheetfile to 'RelaisDriver1.kicad_sch'.
+Add net /IrController/OUT1.
+Update R9 sheetname to '/RelaisDriver1.4/'.
+Add net Net-(Q5-B).
+Update R9 fields.
+Change R9 reference designator to R8.
+Add net /IrController/OUT2.
+Reconnect R5 pin 1 from Net-(D5-Pad2) to Net-(D4-A).
+Add net Net-(D4-A).
+Update R5 footprint filters to 'R_*'.
+Update R5 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update R5 sheetname to '/RelaisDriver1.2/'.
+Update R5 fields.
+Change R5 reference designator to R4.
+Update R3 footprint filters to 'R_*'.
+Update R4 unit metadata.
+Reconnect R4 pin 2 from /RelaisDriver1.2/EN to /IrController/OUT2.
+Update R5 unit metadata.
+Reconnect R4 pin 1 from Net-(Q2-Pad3) to Net-(Q2-B).
+Add net Net-(Q2-B).
+Update R4 footprint filters to 'R_*'.
+Update R4 sheetfile to 'RelaisDriver1.kicad_sch'.
+Add net Net-(D2-A).
+Update R4 sheetname to '/RelaisDriver1.2/'.
+Update R4 fields.
+Change R4 reference designator to R3.
+Reconnect R3 pin 1 from Net-(D3-Pad2) to Net-(D2-A).
+Update R3 unit metadata.
+Reconnect R6 pin 1 from Net-(Q3-Pad3) to Net-(Q3-B).
+Update R3 fields.
+Reconnect R7 pin 1 from Net-(D7-Pad2) to Net-(D6-A).
+Add net Net-(D6-A).
+Update R7 footprint filters to 'R_*'.
+Update R7 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update R7 sheetname to '/RelaisDriver1.3/'.
+Update R7 fields.
+Change R7 reference designator to R6.
+Update R3 sheetname to '/RelaisDriver1.1/'.
+Update R6 unit metadata.
+Update R7 unit metadata.
+Add net Net-(Q3-B).
+Reconnect R6 pin 2 from /RelaisDriver1.3/EN to /IrController/OUT3.
+Add net /IrController/OUT3.
+Update R6 footprint filters to 'R_*'.
+Update R6 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update R6 sheetname to '/RelaisDriver1.3/'.
+Update R6 fields.
+Update R3 sheetfile to 'RelaisDriver1.kicad_sch'.
+Change R6 reference designator to R5.
+Add net /IrController/OUT6.
+Update R1 sheetfile to 'IrController.kicad_sch'.
+Reconnect U1 pin 9 from /RelaisDriver1.2/EN to /IrController/OUT2.
+Reconnect U1 pin 8 from /RelaisDriver1.3/EN to /IrController/OUT3.
+Reconnect U1 pin 10 from /RelaisDriver1.1/EN to /IrController/OUT1.
+Reconnect U1 pin 6 from /RelaisDriver2.1/EN to /IrController/OUT5.
+Reconnect U1 pin 5 from /RelaisDriver2.2/EN to /IrController/OUT6.
+Reconnect U1 pin 7 from /RelaisDriver1.4/EN to /IrController/OUT4.
+Reconnect U1 pin 3 from /RelaisDriver2.4/EN to /IrController/OUT7.
+Update U1 sheetfile to 'IrController.kicad_sch'.
+Update U1 sheetname to '/IrController/'.
+Update U1 fields.
+Update R1 unit metadata.
+Update R1 footprint filters to 'R_*'.
+Reconnect U1 pin 2 from /RelaisDriver2.3/EN to /IrController/OUT8.
+Update R1 sheetname to '/IrController/'.
+Update R1 fields.
+Change R1 reference designator to R17.
+Update R17 unit metadata.
+Reconnect R17 pin 1 from Net-(D17-Pad2) to Net-(D16-A).
+Add net Net-(D16-A).
+Update R17 footprint filters to 'R_*'.
+Update R17 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R17 sheetname to '/RelaisDriver2.3/'.
+Update R17 fields.
+Change R17 reference designator to R16.
+Update R16 unit metadata.
+Reconnect via from /RelaisDriver1.3/EN to /IrController/OUT3.
+Reconnect via from /RelaisDriver1.1/EN to /IrController/OUT1.
+Reconnect via from /RelaisDriver1.1/EN to /IrController/OUT1.
+Reconnect via from /RelaisDriver2.3/EN to /IrController/OUT8.
+Reconnect via from /RelaisDriver2.3/EN to /IrController/OUT8.
+Reconnect via from /RelaisDriver2.4/EN to /IrController/OUT7.
+Reconnect via from /RelaisDriver2.4/EN to /IrController/OUT7.
+Reconnect via from /RelaisDriver2.2/EN to /IrController/OUT6.
+Reconnect via from /RelaisDriver2.2/EN to /IrController/OUT6.
+Reconnect via from /RelaisDriver2.1/EN to /IrController/OUT5.
+Reconnect via from /RelaisDriver2.1/EN to /IrController/OUT5.
+Reconnect via from /RelaisDriver1.4/EN to /IrController/OUT4.
+Reconnect via from /RelaisDriver1.4/EN to /IrController/OUT4.
+Reconnect R16 pin 1 from Net-(Q8-Pad3) to Net-(Q8-B).
+Reconnect via from /RelaisDriver1.3/EN to /IrController/OUT3.
+Reconnect via from /RelaisDriver1.2/EN to /IrController/OUT2.
+Reconnect via from /RelaisDriver1.2/EN to /IrController/OUT2.
+Reconnect via from Net-(D16-Pad2) to Net-(D15-A).
+Reconnect via from Net-(D16-Pad2) to Net-(D15-A).
+Reconnect via from Net-(D14-Pad2) to Net-(D13-A).
+Reconnect via from Net-(D14-Pad2) to Net-(D13-A).
+Reconnect via from Net-(D12-Pad2) to Net-(D11-A).
+Reconnect via from Net-(D12-Pad2) to Net-(D11-A).
+Reconnect via from Net-(D10-Pad2) to Net-(D10-K).
+Reconnect via from Net-(D10-Pad2) to Net-(D10-K).
+Update U1 unit metadata.
+Add net Net-(Q6-B).
+Update R13 unit metadata.
+Reconnect R13 pin 1 from Net-(D13-Pad2) to Net-(D12-A).
+Add net Net-(D12-A).
+Update R13 footprint filters to 'R_*'.
+Update R13 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R13 sheetname to '/RelaisDriver2.2/'.
+Update R13 fields.
+Change R13 reference designator to R12.
+Update R12 unit metadata.
+Reconnect R12 pin 2 from /RelaisDriver2.2/EN to /IrController/OUT6.
+Update PS1 sheetfile to 'PowerSupply.kicad_sch'.
+Reconnect R12 pin 1 from Net-(Q6-Pad3) to Net-(Q6-B).
+Change R14 reference designator to R13.
+Update R12 footprint filters to 'R_*'.
+Update R12 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R12 sheetname to '/RelaisDriver2.2/'.
+Update R12 fields.
+Change R12 reference designator to R11.
+Update R11 unit metadata.
+Reconnect R11 pin 1 from Net-(D11-Pad2) to Net-(D10-A).
+Add net Net-(D10-A).
+Update R11 footprint filters to 'R_*'.
+Update R11 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R11 sheetname to '/RelaisDriver2.1/'.
+Update R11 fields.
+Update R15 sheetfile to 'RelaisDriver2.kicad_sch'.
+Add net Net-(Q8-B).
+Reconnect R16 pin 2 from /RelaisDriver2.3/EN to /IrController/OUT8.
+Add net /IrController/OUT8.
+Update R16 footprint filters to 'R_*'.
+Update R16 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R16 sheetname to '/RelaisDriver2.3/'.
+Update R16 fields.
+Change R16 reference designator to R15.
+Update R15 unit metadata.
+Reconnect R15 pin 1 from Net-(D15-Pad2) to Net-(D14-A).
+Add net Net-(D14-A).
+Update R15 footprint filters to 'R_*'.
+Change R11 reference designator to R10.
+Update R15 sheetname to '/RelaisDriver2.4/'.
+Update R15 fields.
+Change R15 reference designator to R14.
+Update R14 unit metadata.
+Reconnect R14 pin 2 from /RelaisDriver2.4/EN to /IrController/OUT7.
+Add net /IrController/OUT7.
+Reconnect R14 pin 1 from Net-(Q7-Pad3) to Net-(Q7-B).
+Add net Net-(Q7-B).
+Update R14 footprint filters to 'R_*'.
+Update R14 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update R14 sheetname to '/RelaisDriver2.4/'.
+Update R14 fields.
+Update J4 fields.
+Add net Net-(J7-Pin_2).
+Update J5 footprint filters to 'Connector*:*_1x??_*'.
+Update J5 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update J5 sheetname to '/RelaisDriver2.1/'.
+Update J5 fields.
+Change J5 reference designator to J7.
+Update J4 unit metadata.
+Reconnect J4 pin 1 from Net-(J4-Pad1) to Net-(J6-Pin_1).
+Add net Net-(J6-Pin_1).
+Update J4 footprint filters to 'Connector*:*_1x??_*'.
+Update J4 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update J4 sheetname to '/RelaisDriver1.4/'.
+Reconnect J5 pin 2 from Net-(J5-Pad2) to Net-(J7-Pin_2).
+Change J4 reference designator to J6.
+Update J3 unit metadata.
+Reconnect J3 pin 1 from Net-(J3-Pad1) to Net-(J5-Pin_1).
+Add net Net-(J5-Pin_1).
+Update J3 footprint filters to 'Connector*:*_1x??_*'.
+Update J3 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update J3 sheetname to '/RelaisDriver1.3/'.
+Update J3 fields.
+Change J3 reference designator to J5.
+Update J2 unit metadata.
+Reconnect J2 pin 1 from Net-(J2-Pad1) to Net-(J4-Pin_1).
+Update J7 sheetname to '/RelaisDriver2.4/'.
+Reconnect J8 pin 2 from Net-(J8-Pad2) to Net-(J10-Pin_2).
+Add net Net-(J10-Pin_2).
+Update J8 footprint filters to 'Connector*:*_1x??_*'.
+Update J8 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update J8 sheetname to '/RelaisDriver2.3/'.
+Update J8 fields.
+Change J8 reference designator to J10.
+Update J7 unit metadata.
+Reconnect J7 pin 2 from Net-(J7-Pad2) to Net-(J9-Pin_2).
+Add net Net-(J9-Pin_2).
+Update J7 footprint filters to 'Connector*:*_1x??_*'.
+Update J7 sheetfile to 'RelaisDriver2.kicad_sch'.
+Add net Net-(J4-Pin_1).
+Update J7 fields.
+Change J7 reference designator to J9.
+Update J6 unit metadata.
+Reconnect J6 pin 2 from Net-(J6-Pad2) to Net-(J8-Pin_2).
+Add net Net-(J8-Pin_2).
+Update J6 footprint filters to 'Connector*:*_1x??_*'.
+Update J6 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update J6 sheetname to '/RelaisDriver2.2/'.
+Update J6 fields.
+Change J6 reference designator to J8.
+Update J5 unit metadata.
+Add D6 (footprint 'IrOutlet:HDR_1x2').
+Change J9 reference designator to J1.
+Add D17 (footprint 'IrOutlet:DIODE_H').
+Add D16 (footprint 'IrOutlet:HDR_1x2').
+Add D15 (footprint 'IrOutlet:DIODE_H').
+Add D14 (footprint 'IrOutlet:HDR_1x2').
+Add D13 (footprint 'IrOutlet:DIODE_H').
+Add D12 (footprint 'IrOutlet:HDR_1x2').
+Add D11 (footprint 'IrOutlet:DIODE_H').
+Add D10 (footprint 'IrOutlet:HDR_1x2').
+Add D9 (footprint 'IrOutlet:DIODE_H').
+Add D8 (footprint 'IrOutlet:HDR_1x2').
+Add D7 (footprint 'IrOutlet:DIODE_H').
+Update J9 fields.
+Add D5 (footprint 'IrOutlet:DIODE_H').
+Add D4 (footprint 'IrOutlet:HDR_1x2').
+Add D3 (footprint 'IrOutlet:DIODE_H').
+Add D2 (footprint 'IrOutlet:HDR_1x2').
+Add D1 (footprint 'IrOutlet:DIODE_H').
+Add C2 (footprint 'IrOutlet:CAP_6.3mm_P2.50mm').
+Update C1 unit metadata.
+Update C1 footprint filters to 'C_*'.
+Update C1 sheetfile to 'IrController.kicad_sch'.
+Update C1 sheetname to '/IrController/'.
+Update C1 fields.
+Update J1 fields.
+Update J2 footprint filters to 'Connector*:*_1x??_*'.
+Update J2 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update J2 sheetname to '/RelaisDriver1.2/'.
+Update J2 fields.
+Change J2 reference designator to J4.
+Update J1 unit metadata.
+Reconnect J1 pin 1 from Net-(J1-Pad1) to Net-(J3-Pin_1).
+Add net Net-(J3-Pin_1).
+Update J1 footprint filters to 'Connector*:*_1x??_*'.
+Update J1 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update J1 sheetname to '/RelaisDriver1.1/'.
+Update J8 unit metadata.
+Change J1 reference designator to J3.
+Update J10 unit metadata.
+Update J10 footprint filters to 'TerminalBlock*:*'.
+Update J10 sheetfile to 'PowerSupply.kicad_sch'.
+Update J10 sheetname to '/PowerSupply/'.
+Update J10 fields.
+Change J10 reference designator to J2.
+Update J9 unit metadata.
+Update J9 footprint filters to 'TerminalBlock*:*'.
+Update J9 sheetfile to 'PowerSupply.kicad_sch'.
+Update J9 sheetname to '/PowerSupply/'.
+Add net Net-(D11-A).
+Update K7 unit metadata.
+Reconnect K7 pin 2 from Net-(J7-Pad2) to Net-(J9-Pin_2).
+Reconnect K7 pin 2 from Net-(J7-Pad2) to Net-(J9-Pin_2).
+Reconnect K7 pin 5 from Net-(D14-Pad2) to Net-(D13-A).
+Add net Net-(D13-A).
+Update K7 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K7 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update K7 sheetname to '/RelaisDriver2.4/'.
+Update K7 fields.
+Update K6 unit metadata.
+Reconnect K6 pin 2 from Net-(J6-Pad2) to Net-(J8-Pin_2).
+Reconnect K6 pin 5 from Net-(D12-Pad2) to Net-(D11-A).
+Update K8 fields.
+Reconnect K6 pin 2 from Net-(J6-Pad2) to Net-(J8-Pin_2).
+Update K6 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K6 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update K6 sheetname to '/RelaisDriver2.2/'.
+Update K6 fields.
+Update K5 unit metadata.
+Reconnect K5 pin 2 from Net-(J5-Pad2) to Net-(J7-Pin_2).
+Reconnect K5 pin 2 from Net-(J5-Pad2) to Net-(J7-Pin_2).
+Reconnect K5 pin 5 from Net-(D10-Pad2) to Net-(D10-K).
+Add net Net-(D10-K).
+Update K5 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update PS1 unit metadata.
+Update R2 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update R2 sheetname to '/RelaisDriver1.1/'.
+Update R2 fields.
+Change R2 reference designator to R1.
+Add Q8 (footprint 'IrOutlet:TO-92').
+Add Q7 (footprint 'IrOutlet:TO-92').
+Add Q6 (footprint 'IrOutlet:TO-92').
+Add Q5 (footprint 'IrOutlet:TO-92').
+Add Q4 (footprint 'IrOutlet:TO-92').
+Add Q3 (footprint 'IrOutlet:TO-92').
+Add Q2 (footprint 'IrOutlet:TO-92').
+Add Q1 (footprint 'IrOutlet:TO-92').
+Update K5 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update PS1 footprint filters to 'Converter*ACDC*MeanWell*IRM*05*THT*'.
+Update PS1 sheetname to '/PowerSupply/'.
+Update PS1 fields.
+Update K8 unit metadata.
+Reconnect K8 pin 2 from Net-(J8-Pad2) to Net-(J10-Pin_2).
+Reconnect K8 pin 5 from Net-(D16-Pad2) to Net-(D15-A).
+Add net Net-(D15-A).
+Reconnect K8 pin 2 from Net-(J8-Pad2) to Net-(J10-Pin_2).
+Update K8 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K8 sheetfile to 'RelaisDriver2.kicad_sch'.
+Update K8 sheetname to '/RelaisDriver2.3/'.
+Update K1 sheetname to '/RelaisDriver1.1/'.
+Reconnect K2 pin 2 from Net-(J2-Pad1) to Net-(J4-Pin_1).
+Update K2 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K2 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update K2 sheetname to '/RelaisDriver1.2/'.
+Update K2 fields.
+Update K1 unit metadata.
+Reconnect K1 pin 2 from Net-(J1-Pad1) to Net-(J3-Pin_1).
+Reconnect K1 pin 5 from Net-(D2-Pad2) to Net-(D1-A).
+Add net Net-(D1-A).
+Reconnect K1 pin 2 from Net-(J1-Pad1) to Net-(J3-Pin_1).
+Update K1 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K1 sheetfile to 'RelaisDriver1.kicad_sch'.
+Add net Net-(D3-A).
+Update K1 fields.
+Update J12 unit metadata.
+Update J12 footprint filters to 'Connector*:*_1x??_*'.
+Update J12 sheetfile to 'IrController.kicad_sch'.
+Update J12 sheetname to '/IrController/'.
+Update J12 fields.
+Update J11 unit metadata.
+Update J11 footprint filters to 'Jack*'.
+Update J11 sheetfile to 'IrController.kicad_sch'.
+Update J11 sheetname to '/IrController/'.
+Update J11 fields.
+Update K3 unit metadata.
+Update K5 sheetname to '/RelaisDriver2.1/'.
+Update K5 fields.
+Update K4 unit metadata.
+Reconnect K4 pin 2 from Net-(J4-Pad1) to Net-(J6-Pin_1).
+Reconnect K4 pin 5 from Net-(D8-Pad2) to Net-(D7-A).
+Add net Net-(D7-A).
+Reconnect K4 pin 2 from Net-(J4-Pad1) to Net-(J6-Pin_1).
+Update K4 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K4 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update K4 sheetname to '/RelaisDriver1.4/'.
+Update K4 fields.
+Update R2 footprint filters to 'R_*'.
+Reconnect K3 pin 2 from Net-(J3-Pad1) to Net-(J5-Pin_1).
+Reconnect K3 pin 5 from Net-(D6-Pad2) to Net-(D5-A).
+Add net Net-(D5-A).
+Reconnect K3 pin 2 from Net-(J3-Pad1) to Net-(J5-Pin_1).
+Update K3 footprint filters to 'Relay*SPST*TE*PCH*1***2M*'.
+Update K3 sheetfile to 'RelaisDriver1.kicad_sch'.
+Update K3 sheetname to '/RelaisDriver1.3/'.
+Update K3 fields.
+Update K2 unit metadata.
+Reconnect K2 pin 2 from Net-(J2-Pad1) to Net-(J4-Pin_1).
+Reconnect K2 pin 5 from Net-(D4-Pad2) to Net-(D3-A).
+
+
+Info: Total warnings: 0, errors: 0.

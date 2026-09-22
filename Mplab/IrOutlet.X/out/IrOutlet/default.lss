@@ -1,0 +1,819 @@
+
+default.elf:	file format elf32-pic
+
+Sections:
+Idx Name                       Size     VMA      Type
+  0                            00000000 00000000 
+  1 intentry                   00000038 00000004 TEXT
+  2 end_init                   00000004 00000020 DATA
+  3 cinit                      0000034e 00000022 TEXT
+  4 reset_vec                  00000004 00000000 DATA
+  5 bssBANK0                   00000006 00000020 BSS
+  6 bssCOMMON                  0000000c 00000070 BSS
+  7 dabs$0                     00000002 0000007e BSS
+  8 _stray_data_0_             00000008 00008000 DATA
+  9 _stray_data_1_             0000000a 00008007 DATA
+ 10 .strtab                    000004d8 00000000 
+ 11 .symtab                    00000700 00000000 
+ 12 .debug_abbrev              00000106 00000000 DEBUG
+ 13 .debug_info                00001509 00000000 DEBUG
+ 14 .debug_line                000003f5 00000000 DEBUG
+ 15 .debug_ranges              00000024 00000000 DEBUG
+ 16 .debug_pubnames            00000264 00000000 DEBUG
+ 17 .debug_aranges             000000e0 00000000 DEBUG
+ 18 .note.microchip.deviceinfo 00000024 00000000 
+ 19 .shstrtab                  000000e3 00000000 
+
+Disassembly of section intentry:
+
+00000004 <_isr>:
+; __pintentry():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:24
+; void __interrupt() isr(void)
+       4: 7e 14        	bsf	0x7e, 0x0
+       5: 80 31        	movlp	0x0
+       6: 00 30        	movlw	0x0
+       7: 86 00        	movwf	0x6
+       8: 00 30        	movlw	0x0
+       9: 87 00        	movwf	0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:26
+;     if ( IOCAFbits.IOCAF2 )
+       a: 7e 01        	<unknown>
+       b: 3f 1d        	btfss	0x3f, 0x2
+       c: 0e 28        	goto	0xe
+       d: 0f 28        	goto	0xf
+       e: 14 28        	goto	0x14
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:29
+;         rc5IsrPin(); 
+       f: 80 31        	movlp	0x0
+      10: 31 20        	call	0x31
+      11: 80 31        	movlp	0x0
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:30
+;         IOCAFbits.IOCAF2 = 0;
+      12: 7e 01        	<unknown>
+      13: 3f 11        	bcf	0x3f, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:33
+;     if ( PIR4bits.TMR2IF )
+      14: 4e 01        	<unknown>
+      15: 90 1c        	btfss	0x10, 0x1
+      16: 18 28        	goto	0x18
+      17: 19 28        	goto	0x19
+      18: 1e 28        	goto	0x1e
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:36
+;         rc5IsrTimer();        
+      19: 81 31        	movlp	0x1
+      1a: c2 21        	call	0x1c2
+      1b: 80 31        	movlp	0x0
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:37
+;         PIR4bits.TMR2IF = 0;        
+      1c: 4e 01        	<unknown>
+      1d: 90 10        	bcf	0x10, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/interrupts.c:39
+; }
+      1e: 7e 10        	bcf	0x7e, 0x0
+      1f: 09 00        	retfie
+
+Disassembly of section cinit:
+
+00000022 <start_initialization>:
+; __initialization():
+      22: f0 01        	clrf	0x70
+; __execute@rc5Command():
+      23: f1 01        	clrf	0x71
+      24: f2 01        	clrf	0x72
+      25: f3 01        	clrf	0x73
+      26: f4 01        	clrf	0x74
+      27: f5 01        	clrf	0x75
+      28: f6 01        	clrf	0x76
+      29: 40 01        	<unknown>
+      2a: a0 01        	clrf	0x20
+      2b: a1 01        	clrf	0x21
+      2c: a2 01        	clrf	0x22
+
+0000002d <end_of_initialization>:
+; __end_of__initialization():
+      2d: 7e 10        	bcf	0x7e, 0x0
+      2e: 40 01        	<unknown>
+      2f: 81 31        	movlp	0x1
+      30: ba 29        	goto	0x1ba
+
+00000031 <_rc5IsrPin>:
+; __ptext6():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:99
+;     IOCAFbits.IOCAF2 = 0;
+      31: 7e 01        	<unknown>
+      32: 3f 11        	bcf	0x3f, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:102
+;     IOCAPbits.IOCAP2 = 1 - IOCAPbits.IOCAP2;
+      33: 3d 0c        	rrf	0x3d, w
+      34: 89 0c        	rrf	0x9, f
+      35: 01 39        	andlw	0x1
+      36: 01 3c        	sublw	0x1
+      37: f7 00        	movwf	0x77
+      38: f7 0d        	rlf	0x77, f
+      39: f7 0d        	rlf	0x77, f
+      3a: 3d 08        	movf	0x3d, w
+      3b: 77 06        	xorwf	0x77, w
+      3c: fb 39        	andlw	0xfb
+      3d: 77 06        	xorwf	0x77, w
+      3e: bd 00        	movwf	0x3d
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:103
+;     IOCANbits.IOCAN2 = 1 - IOCANbits.IOCAN2;
+      3f: 3e 0c        	rrf	0x3e, w
+      40: 89 0c        	rrf	0x9, f
+      41: 01 39        	andlw	0x1
+      42: 01 3c        	sublw	0x1
+      43: f7 00        	movwf	0x77
+      44: f7 0d        	rlf	0x77, f
+      45: f7 0d        	rlf	0x77, f
+      46: 3e 08        	movf	0x3e, w
+      47: 77 06        	xorwf	0x77, w
+      48: fb 39        	andlw	0xfb
+      49: 77 06        	xorwf	0x77, w
+      4a: be 00        	movwf	0x3e
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:106
+;     uint8_t time = TMR2;    /* read timer */ 
+      4b: 45 01        	<unknown>
+      4c: 0c 08        	movf	0xc, w
+      4d: fb 00        	movwf	0x7b
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:107
+;     TMR2 = 0b00000000;      /* clear timer 2 value register */
+      4e: 8c 01        	clrf	0xc
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:110
+;     switch ( _state )
+      4f: de 28        	goto	0xde
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:115
+;             _state = RC5_STATE_RECV;
+      50: 01 30        	movlw	0x1
+      51: f5 00        	movwf	0x75
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:116
+;             _bitValues = 0x0001;
+      52: 01 30        	movlw	0x1
+      53: f0 00        	movwf	0x70
+      54: 00 30        	movlw	0x0
+      55: f1 00        	movwf	0x71
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:117
+;             _bitCount = 1;
+      56: 01 30        	movlw	0x1
+      57: f4 00        	movwf	0x74
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:118
+;             _shortPulseCount = 0;
+      58: f3 01        	clrf	0x73
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:119
+;             _previousBitValue = 1;
+      59: 01 30        	movlw	0x1
+      5a: f2 00        	movwf	0x72
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:122
+;             PIR4bits.TMR2IF = 0;    /* reset timer interrupt flag */
+      5b: 4e 01        	<unknown>
+      5c: 90 10        	bcf	0x10, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:123
+;             PIE4bits.TMR2IE = 1;    /* enable timer2 interrupt */
+      5d: 9a 14        	bsf	0x1a, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:124
+;             break;
+      5e: ee 28        	goto	0xee
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:130
+;             if (   ( time > RC5_TIME_TOOSHORT )
+      5f: 1d 30        	movlw	0x1d
+      60: 7b 02        	subwf	0x7b, w
+      61: 03 1c        	btfss	0x3, 0x0
+      62: 64 28        	goto	0x64
+      63: 65 28        	goto	0x65
+      64: d7 28        	goto	0xd7
+      65: 8b 30        	movlw	0x8b
+      66: 7b 02        	subwf	0x7b, w
+      67: 03 18        	btfsc	0x3, 0x0
+      68: 6a 28        	goto	0x6a
+      69: 6b 28        	goto	0x6b
+      6a: d7 28        	goto	0xd7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:134
+;                 if ( time < RC5_TIME_BOUNDARY )
+      6b: 53 30        	movlw	0x53
+      6c: 7b 02        	subwf	0x7b, w
+      6d: 03 18        	btfsc	0x3, 0x0
+      6e: 70 28        	goto	0x70
+      6f: 71 28        	goto	0x71
+; __pbssCOMMON():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:134
+      70: 89 28        	goto	0x89
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+;                     if ( ++_shortPulseCount == 2 )
+      71: 01 30        	movlw	0x1
+; __previousBitValue():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+      72: f3 07        	addwf	0x73, f
+; __shortPulseCount():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+      73: 02 30        	movlw	0x2
+; __bitCount():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+      74: 73 06        	xorwf	0x73, w
+; __state():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+      75: 03 1d        	btfss	0x3, 0x2
+; __rc5CommandAvailable():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+      76: 78 28        	goto	0x78
+; __pcstackCOMMON():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:137
+      77: 79 28        	goto	0x79
+      78: 9b 28        	goto	0x9b
+; _rc5IsrPin$632():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:139
+;                         _bitValues <<= 1;
+      79: 01 30        	movlw	0x1
+      7a: f0 35        	lslf	0x70, f
+; rc5IsrPin@time():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:139
+      7b: f1 0d        	rlf	0x71, f
+      7c: 89 0b        	decfsz	0x9, f
+      7d: 7a 28        	goto	0x7a
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:140
+;                         _bitValues |= _previousBitValue;
+      7e: 72 08        	movf	0x72, w
+      7f: f7 00        	movwf	0x77
+      80: f8 01        	clrf	0x78
+      81: 77 08        	movf	0x77, w
+      82: f0 04        	iorwf	0x70, f
+      83: 78 08        	movf	0x78, w
+      84: f1 04        	iorwf	0x71, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:141
+;                         _bitCount++;
+      85: 01 30        	movlw	0x1
+      86: f4 07        	addwf	0x74, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:142
+;                         _shortPulseCount = 0;
+      87: f3 01        	clrf	0x73
+      88: 9b 28        	goto	0x9b
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:148
+;                     _previousBitValue = 1 - _previousBitValue;
+      89: 72 08        	movf	0x72, w
+      8a: 01 3c        	sublw	0x1
+      8b: f2 00        	movwf	0x72
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:149
+;                     _bitValues <<= 1;
+      8c: 01 30        	movlw	0x1
+      8d: f0 35        	lslf	0x70, f
+      8e: f1 0d        	rlf	0x71, f
+      8f: 89 0b        	decfsz	0x9, f
+      90: 8d 28        	goto	0x8d
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:150
+;                     _bitValues |= _previousBitValue;
+      91: 72 08        	movf	0x72, w
+      92: f7 00        	movwf	0x77
+      93: f8 01        	clrf	0x78
+      94: 77 08        	movf	0x77, w
+      95: f0 04        	iorwf	0x70, f
+      96: 78 08        	movf	0x78, w
+      97: f1 04        	iorwf	0x71, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:151
+;                     _bitCount++;
+      98: 01 30        	movlw	0x1
+      99: f4 07        	addwf	0x74, f
+      9a: 87 28        	goto	0x87
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:155
+;                 if ( _bitCount == RC5_CMD_BITSIZE )
+      9b: 0e 30        	movlw	0xe
+      9c: 74 06        	xorwf	0x74, w
+      9d: 03 1d        	btfss	0x3, 0x2
+      9e: a0 28        	goto	0xa0
+      9f: a1 28        	goto	0xa1
+      a0: ee 28        	goto	0xee
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:158
+;                     IOCAPbits.IOCAP2 = 0;   /* disable interrupt on change rising edge */
+      a1: 7e 01        	<unknown>
+      a2: 3d 11        	bcf	0x3d, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:159
+;                     IOCANbits.IOCAN2 = 1;   /* enable interrupt on change falling edge */
+      a3: 3e 15        	bsf	0x3e, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:160
+;                     PIR4bits.TMR2IF = 0;    /* disable timer2 interrupt */
+      a4: 4e 01        	<unknown>
+      a5: 90 10        	bcf	0x10, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:163
+;                     _rc5Command.toggle = ( ( _bitValues >> 11 ) & 0x01 ) ? 1 : 0;
+      a6: 71 08        	movf	0x71, w
+      a7: f8 00        	movwf	0x78
+      a8: 70 08        	movf	0x70, w
+      a9: f7 00        	movwf	0x77
+      aa: 0b 30        	movlw	0xb
+      ab: f8 36        	lsrf	0x78, f
+      ac: f7 0c        	rrf	0x77, f
+      ad: 89 0b        	decfsz	0x9, f
+      ae: ab 28        	goto	0xab
+      af: 77 18        	btfsc	0x77, 0x0
+      b0: b2 28        	goto	0xb2
+      b1: b4 28        	goto	0xb4
+      b2: 01 30        	movlw	0x1
+      b3: b5 28        	goto	0xb5
+      b4: 00 30        	movlw	0x0
+      b5: 40 01        	<unknown>
+      b6: a0 00        	movwf	0x20
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:164
+;                     _rc5Command.address = ( ( _bitValues >> 6 ) & 0x1F );
+      b7: 71 08        	movf	0x71, w
+      b8: f8 00        	movwf	0x78
+      b9: 70 08        	movf	0x70, w
+      ba: f7 00        	movwf	0x77
+      bb: 06 30        	movlw	0x6
+      bc: f8 36        	lsrf	0x78, f
+      bd: f7 0c        	rrf	0x77, f
+      be: 89 0b        	decfsz	0x9, f
+      bf: bc 28        	goto	0xbc
+      c0: 77 08        	movf	0x77, w
+      c1: 1f 39        	andlw	0x1f
+      c2: a1 00        	movwf	0x21
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:165
+;                     _rc5Command.command = ( _bitValues & 0x3F );
+      c3: 70 08        	movf	0x70, w
+      c4: 3f 39        	andlw	0x3f
+      c5: a2 00        	movwf	0x22
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:166
+;                     _rc5Command.command |= ( ( _bitValues & 0x1000 ) ? 0x00 : 0x40 );
+      c6: 71 1a        	btfsc	0x71, 0x4
+      c7: c9 28        	goto	0xc9
+      c8: ca 28        	goto	0xca
+      c9: cf 28        	goto	0xcf
+      ca: 40 30        	movlw	0x40
+      cb: f9 00        	movwf	0x79
+      cc: 00 30        	movlw	0x0
+      cd: fa 00        	movwf	0x7a
+      ce: d1 28        	goto	0xd1
+      cf: f9 01        	clrf	0x79
+      d0: fa 01        	clrf	0x7a
+      d1: 79 08        	movf	0x79, w
+      d2: a2 04        	iorwf	0x22, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:169
+;                     _state = RC5_STATE_IDLE;
+      d3: f5 01        	clrf	0x75
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:170
+;                     _rc5CommandAvailable = true;
+      d4: 01 30        	movlw	0x1
+      d5: f6 00        	movwf	0x76
+      d6: ee 28        	goto	0xee
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:176
+;                 IOCAPbits.IOCAP2 = 0;   /* disable interrupt on change rising edge */
+      d7: 7e 01        	<unknown>
+      d8: 3d 11        	bcf	0x3d, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:177
+;                 IOCANbits.IOCAN2 = 1;   /* enable interrupt on change falling edge */
+      d9: 3e 15        	bsf	0x3e, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:178
+;                 PIR4bits.TMR2IF = 0;    /* disable timer2 interrupt */
+      da: 4e 01        	<unknown>
+      db: 90 10        	bcf	0x10, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:181
+;                 _state = RC5_STATE_IDLE;
+      dc: f5 01        	clrf	0x75
+      dd: ee 28        	goto	0xee
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:191
+;     }
+      de: 75 08        	movf	0x75, w
+      df: f7 00        	movwf	0x77
+      e0: f8 01        	clrf	0x78
+      e1: 78 08        	movf	0x78, w
+      e2: 00 3a        	xorlw	0x0
+      e3: 03 19        	btfsc	0x3, 0x2
+      e4: e6 28        	goto	0xe6
+      e5: ee 28        	goto	0xee
+      e6: 77 08        	movf	0x77, w
+      e7: 00 3a        	xorlw	0x0
+      e8: 03 19        	btfsc	0x3, 0x2
+      e9: 50 28        	goto	0x50
+      ea: 01 3a        	xorlw	0x1
+      eb: 03 19        	btfsc	0x3, 0x2
+      ec: 5f 28        	goto	0x5f
+      ed: ee 28        	goto	0xee
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:192
+; }
+      ee: 08 00        	return
+
+000000ef <__ptext3>:
+; __ptext3():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:131
+;         if ( rc5Ready() == true )
+      ef: 76 03        	decf	0x76, w
+      f0: 03 1d        	btfss	0x3, 0x2
+      f1: f3 28        	goto	0xf3
+      f2: f4 28        	goto	0xf4
+      f3: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:134
+;             di();                   /* disable interrupts */
+      f4: 8b 13        	bcf	0xb, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:135
+;             rc5Command = rc5Get();  /* store local copy of data */
+      f5: 40 01        	<unknown>
+      f6: 20 08        	movf	0x20, w
+      f7: a3 00        	movwf	0x23
+      f8: 21 08        	movf	0x21, w
+      f9: a4 00        	movwf	0x24
+      fa: 22 08        	movf	0x22, w
+      fb: a5 00        	movwf	0x25
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:136
+;             rc5Clear();             /* clear ready flag */            
+      fc: f6 01        	clrf	0x76
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:137
+;             ei();                   /* enable interrupts */
+      fd: 8b 17        	bsf	0xb, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:140
+;             if (rc5Command.address == 0b00101 )
+      fe: 05 30        	movlw	0x5
+      ff: 24 06        	xorwf	0x24, w
+     100: 03 1d        	btfss	0x3, 0x2
+     101: 03 29        	goto	0x103
+     102: 04 29        	goto	0x104
+     103: 67 29        	goto	0x167
+     104: 2f 29        	goto	0x12f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:147
+;                         PORTC |= 0b00111111;
+     105: 3f 30        	movlw	0x3f
+     106: 8e 04        	iorwf	0xe, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:148
+;                         PORTA |= 0b00110000;                        
+     107: 30 30        	movlw	0x30
+     108: 8c 04        	iorwf	0xc, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:149
+;                         break;
+     109: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:155
+;                         PORTCbits.RC0 = 1;                        
+     10a: 0e 14        	bsf	0xe, 0x0
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:156
+;                         break;
+     10b: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:162
+;                         PORTCbits.RC1 = 1;
+     10c: 8e 14        	bsf	0xe, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:163
+;                         break;
+     10d: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:169
+;                         PORTCbits.RC2 = 1;
+     10e: 0e 15        	bsf	0xe, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:170
+;                         break;
+     10f: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:176
+;                         PORTCbits.RC3 = 1;
+     110: 8e 15        	bsf	0xe, 0x3
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:177
+;                         break;
+     111: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:183
+;                         PORTCbits.RC4 = 1;
+     112: 0e 16        	bsf	0xe, 0x4
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:184
+;                         break;
+     113: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:190
+;                         PORTCbits.RC5 = 1;
+     114: 8e 16        	bsf	0xe, 0x5
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:191
+;                         break;
+     115: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:197
+;                         PORTAbits.RA4 = 1;
+     116: 0c 16        	bsf	0xc, 0x4
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:198
+;                         break;
+     117: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:204
+;                         PORTAbits.RA5 = 1;
+     118: 8c 16        	bsf	0xc, 0x5
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:205
+;                         break;
+     119: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:211
+;                         PORTC &= 0b11000000;
+     11a: c0 30        	movlw	0xc0
+     11b: 8e 05        	andwf	0xe, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:212
+;                         PORTA &= 0b11001111;
+     11c: cf 30        	movlw	0xcf
+     11d: 8c 05        	andwf	0xc, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:213
+;                         break;
+     11e: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:219
+;                         PORTCbits.RC0 = 0;
+     11f: 0e 10        	bcf	0xe, 0x0
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:220
+;                         break;
+     120: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:226
+;                         PORTCbits.RC1 = 0;
+     121: 8e 10        	bcf	0xe, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:227
+;                         break;
+     122: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:233
+;                         PORTCbits.RC2 = 0;
+     123: 0e 11        	bcf	0xe, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:234
+;                         break;
+     124: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:240
+;                         PORTCbits.RC3 = 0;
+     125: 8e 11        	bcf	0xe, 0x3
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:241
+;                         break;
+     126: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:247
+;                         PORTCbits.RC4 = 0;
+     127: 0e 12        	bcf	0xe, 0x4
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:248
+;                         break;
+     128: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:254
+;                         PORTCbits.RC5 = 0;
+     129: 8e 12        	bcf	0xe, 0x5
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:255
+;                         break;
+     12a: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:261
+;                         PORTAbits.RA4 = 0;
+     12b: 0c 12        	bcf	0xc, 0x4
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:262
+;                         break;
+     12c: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:268
+;                         PORTAbits.RA5 = 0;
+     12d: 8c 12        	bcf	0xc, 0x5
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:269
+;                         break;
+     12e: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:277
+;                 }                                
+     12f: 25 08        	movf	0x25, w
+     130: 00 3a        	xorlw	0x0
+     131: 03 19        	btfsc	0x3, 0x2
+     132: 05 29        	goto	0x105
+     133: 01 3a        	xorlw	0x1
+     134: 03 19        	btfsc	0x3, 0x2
+     135: 0a 29        	goto	0x10a
+     136: 03 3a        	xorlw	0x3
+     137: 03 19        	btfsc	0x3, 0x2
+     138: 0c 29        	goto	0x10c
+     139: 01 3a        	xorlw	0x1
+     13a: 03 19        	btfsc	0x3, 0x2
+     13b: 0e 29        	goto	0x10e
+     13c: 07 3a        	xorlw	0x7
+     13d: 03 19        	btfsc	0x3, 0x2
+     13e: 10 29        	goto	0x110
+     13f: 01 3a        	xorlw	0x1
+     140: 03 19        	btfsc	0x3, 0x2
+     141: 12 29        	goto	0x112
+     142: 03 3a        	xorlw	0x3
+     143: 03 19        	btfsc	0x3, 0x2
+     144: 14 29        	goto	0x114
+     145: 01 3a        	xorlw	0x1
+     146: 03 19        	btfsc	0x3, 0x2
+     147: 16 29        	goto	0x116
+     148: 0f 3a        	xorlw	0xf
+     149: 03 19        	btfsc	0x3, 0x2
+     14a: 18 29        	goto	0x118
+     14b: 01 3a        	xorlw	0x1
+     14c: 03 19        	btfsc	0x3, 0x2
+     14d: 1a 29        	goto	0x11a
+     14e: 29 3a        	xorlw	0x29
+     14f: 03 19        	btfsc	0x3, 0x2
+     150: 1f 29        	goto	0x11f
+     151: 01 3a        	xorlw	0x1
+     152: 03 19        	btfsc	0x3, 0x2
+     153: 21 29        	goto	0x121
+     154: 08 3a        	xorlw	0x8
+     155: 03 19        	btfsc	0x3, 0x2
+     156: 2b 29        	goto	0x12b
+     157: 1b 3a        	xorlw	0x1b
+     158: 03 19        	btfsc	0x3, 0x2
+     159: 23 29        	goto	0x123
+     15a: 06 3a        	xorlw	0x6
+     15b: 03 19        	btfsc	0x3, 0x2
+     15c: 27 29        	goto	0x127
+     15d: 01 3a        	xorlw	0x1
+     15e: 03 19        	btfsc	0x3, 0x2
+     15f: 25 29        	goto	0x125
+     160: 03 3a        	xorlw	0x3
+     161: 03 19        	btfsc	0x3, 0x2
+     162: 29 29        	goto	0x129
+     163: 08 3a        	xorlw	0x8
+     164: 03 19        	btfsc	0x3, 0x2
+     165: 2d 29        	goto	0x12d
+     166: 67 29        	goto	0x167
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:280
+;     }
+     167: 00 00        	nop
+     168: ef 28        	goto	0xef
+     169: 08 00        	return
+
+0000016a <_rc5Setup>:
+; __ptext2():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:64
+;     T2CONbits.ON = 0;               /* disable timer */
+     16a: 45 01        	<unknown>
+     16b: 8e 13        	bcf	0xe, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:65
+;     T2CONbits.OUTPS = 0b0000;       /* set postscaler to 1:1 */
+     16c: f0 30        	movlw	0xf0
+     16d: 8e 05        	andwf	0xe, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:66
+;     T2CONbits.CKPS = 0b111;         /* set prescaler to 1:128 */    
+     16e: 70 30        	movlw	0x70
+     16f: 8e 04        	iorwf	0xe, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:67
+;     T2CLKCONbits.CS = 0b0001;       /* set clock as FOSC/4 */    
+     170: 10 08        	movf	0x10, w
+     171: f0 39        	andlw	0xf0
+     172: 01 38        	iorlw	0x1
+     173: 90 00        	movwf	0x10
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:68
+;     T2HLTbits.MODE = 0b0000;        /* set free running software mode */
+     174: e0 30        	movlw	0xe0
+     175: 8f 05        	andwf	0xf, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:69
+;     T2HLTbits.CKSYNC = 1;           /* set sync clock */
+     176: 8f 16        	bsf	0xf, 0x5
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:70
+;     T2HLTbits.CKPOL = 0;            /* set rising edge of clock */
+     177: 0f 13        	bcf	0xf, 0x6
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:71
+;     T2HLTbits.PSYNC = 1;            /* sync prescaler to FOSC/4 */
+     178: 8f 17        	bsf	0xf, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:72
+;     T2RSTbits.RSEL = 0b0000;        /* T2INPPS external reset (= default) */
+     179: f0 30        	movlw	0xf0
+     17a: 91 05        	andwf	0x11, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:73
+;     T2PR = 0b11111111;              /* set timer reload value */
+     17b: ff 30        	movlw	0xff
+     17c: 8d 00        	movwf	0xd
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:74
+;     PIE4bits.TMR2IE = 0;            /* disable timer2 interrupt */
+     17d: 4e 01        	<unknown>
+     17e: 9a 10        	bcf	0x1a, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:75
+;     T2CONbits.ON = 1;               /* enable timer */
+     17f: 45 01        	<unknown>
+     180: 8e 17        	bsf	0xe, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:76
+;     INTCONbits.PEIE = 1;            /* enable peripheral interrupts */
+     181: 0b 17        	bsf	0xb, 0x6
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:79
+;     PORTAbits.RA2 = 0;              /* reset pin value */
+     182: 40 01        	<unknown>
+     183: 0c 11        	bcf	0xc, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:80
+;     LATAbits.LATA2 = 0;             /* reset pin latch */
+     184: 18 11        	bcf	0x18, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:81
+;     ANSELAbits.ANSA2 = 0;           /* set as digital io */    
+     185: 7e 01        	<unknown>
+     186: 38 11        	bcf	0x38, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:82
+;     WPUAbits.WPUA2 = 1;             /* enable weak pull-up */
+     187: 39 15        	bsf	0x39, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:83
+;     INLVLAbits.INLVLA2 = 1;         /* enable schmitt-trigger input */
+     188: 3c 15        	bsf	0x3c, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:84
+;     TRISAbits.TRISA2 = 1;           /* set as digital input */   
+     189: 40 01        	<unknown>
+     18a: 12 15        	bsf	0x12, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:85
+;     IOCAFbits.IOCAF2 = 0;           /* reset pin interrupt on change flag */
+     18b: 7e 01        	<unknown>
+     18c: 3f 11        	bcf	0x3f, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:86
+;     IOCAPbits.IOCAP2 = 0;           /* disable interrupt on change rising edge */
+     18d: 3d 11        	bcf	0x3d, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:87
+;     IOCANbits.IOCAN2 = 1;           /* enable interrupt on change falling edge */
+     18e: 3e 15        	bsf	0x3e, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:88
+;     PIE0bits.IOCIE = 1;             /* enable interrupt on change */
+     18f: 4e 01        	<unknown>
+     190: 16 16        	bsf	0x16, 0x4
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:91
+;     _state = RC5_STATE_IDLE;
+     191: f5 01        	clrf	0x75
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:92
+; }
+     192: 08 00        	return
+
+00000193 <__ptext1>:
+; __ptext1():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:90
+;     di();
+     193: 8b 13        	bcf	0xb, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:93
+;     PMD4bits.UART1MD = 1;   /* EUSART1 disabled */
+     194: 4f 01        	<unknown>
+     195: 1a 17        	bsf	0x1a, 0x6
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:94
+;     PMD4bits.UART2MD = 1;   /* EUSART2 disabled */
+     196: 9a 17        	bsf	0x1a, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:95
+;     PMD4bits.MSSP1MD = 1;   /* MSSP1 disabled */    
+     197: 1a 16        	bsf	0x1a, 0x4
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:98
+;     PORTA &= 0b11001111;     /* reset pin value */
+     198: cf 30        	movlw	0xcf
+     199: 40 01        	<unknown>
+     19a: 8c 05        	andwf	0xc, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:99
+;     LATA &= 0b11001111;      /* reset pin latch */
+     19b: cf 30        	movlw	0xcf
+     19c: 98 05        	andwf	0x18, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:100
+;     ANSELA &= 0b11001111;    /* set as digital io */    
+     19d: cf 30        	movlw	0xcf
+     19e: 7e 01        	<unknown>
+     19f: b8 05        	andwf	0x38, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:101
+;     ODCONA &= 0b11001111;    /* enable push-pull */
+     1a0: cf 30        	movlw	0xcf
+     1a1: ba 05        	andwf	0x3a, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:102
+;     SLRCONA &= 0b11001111;   /* disable rate limit */
+     1a2: cf 30        	movlw	0xcf
+     1a3: bb 05        	andwf	0x3b, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:103
+;     TRISA &= 0b11001111;     /* set as digital output pin */  
+     1a4: cf 30        	movlw	0xcf
+     1a5: 40 01        	<unknown>
+     1a6: 92 05        	andwf	0x12, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:105
+;     PORTC &= 0b11000000;     /* reset pin value */
+     1a7: c0 30        	movlw	0xc0
+     1a8: 8e 05        	andwf	0xe, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:106
+;     LATC &= 0b11000000;      /* reset pin latch */
+     1a9: c0 30        	movlw	0xc0
+     1aa: 9a 05        	andwf	0x1a, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:107
+;     ANSELC &= 0b11000000;    /* set as digital io */
+     1ab: c0 30        	movlw	0xc0
+     1ac: 7e 01        	<unknown>
+     1ad: ce 05        	andwf	0x4e, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:108
+;     ODCONC &= 0b11000000;    /* enable push-pull */
+     1ae: c0 30        	movlw	0xc0
+     1af: d0 05        	andwf	0x50, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:109
+;     SLRCONC &= 0b11000000;   /* disable rate limit */
+     1b0: c0 30        	movlw	0xc0
+     1b1: d1 05        	andwf	0x51, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:110
+;     TRISC &= 0b11000000;     /* set as digital output pin */
+     1b2: c0 30        	movlw	0xc0
+     1b3: 40 01        	<unknown>
+     1b4: 94 05        	andwf	0x14, f
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:112
+;     rc5Setup();
+     1b5: 81 31        	movlp	0x1
+     1b6: 6a 21        	call	0x16a
+     1b7: 81 31        	movlp	0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:114
+;     ei();
+     1b8: 8b 17        	bsf	0xb, 0x7
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:115
+; }
+     1b9: 08 00        	return
+
+000001ba <_main>:
+; __end_of__initialize():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:75
+;     _initialize();
+     1ba: 81 31        	movlp	0x1
+     1bb: 93 21        	call	0x193
+     1bc: 81 31        	movlp	0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:78
+;     _execute();
+     1bd: 80 31        	movlp	0x0
+     1be: ef 20        	call	0xef
+     1bf: 81 31        	movlp	0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/main.c:79
+; }
+     1c0: 80 31        	movlp	0x0
+     1c1: 20 28        	goto	0x20
+
+000001c2 <_rc5IsrTimer>:
+; __end_of_main():
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:201
+;         IOCAPbits.IOCAP2 = 0;   /* disable interrupt on change rising edge */
+     1c2: 7e 01        	<unknown>
+     1c3: 3d 11        	bcf	0x3d, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:202
+;         IOCANbits.IOCAN2 = 1;   /* enable interrupt on change falling edge */
+     1c4: 3e 15        	bsf	0x3e, 0x2
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:203
+;         PIR4bits.TMR2IF = 0;    /* disable timer2 interrupt */
+     1c5: 4e 01        	<unknown>
+     1c6: 90 10        	bcf	0x10, 0x1
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:206
+;         _state = RC5_STATE_IDLE;
+     1c7: f5 01        	clrf	0x75
+; /home/bart/Documents/Development/Embedded/pic/iroutlet/Mplab/IrOutlet.X/rc5.c:208
+; }
+     1c8: 08 00        	return
